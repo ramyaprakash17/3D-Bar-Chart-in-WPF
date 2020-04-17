@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sample_WPF
 {
-    public class UserProfile
+    public class Sales
     {
-        public DateTime TimeStamp { get; set; }
+        public string Product { get; set; }
 
-        public double NoOfUsers { get; set; }
-
+        public double Revenue { get; set; }
     }
 }

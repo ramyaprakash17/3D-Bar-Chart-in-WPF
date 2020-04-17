@@ -8,21 +8,19 @@ using System.Threading.Tasks;
 
 namespace Sample_WPF
 {
-    public class UsersViewModel
+    public class ViewModel
     {
-        public UsersViewModel()
+        public ViewModel()
         {
-            this.UsersList = new ObservableCollection<UserProfile>();
-            DateTime date = DateTime.Today;
-            UsersList.Add(new UserProfile { TimeStamp = date.AddHours(0.5), NoOfUsers = 1000 });
-            UsersList.Add(new UserProfile { TimeStamp = date.AddHours(0.5), NoOfUsers = 5000 });
-            UsersList.Add(new UserProfile { TimeStamp = date.AddHours(0.5), NoOfUsers = 3000 });
-            UsersList.Add(new UserProfile { TimeStamp = date.AddHours(0.5), NoOfUsers = 4000 });
-            UsersList.Add(new UserProfile { TimeStamp = date.AddHours(0.5), NoOfUsers = 2000 });
-            UsersList.Add(new UserProfile { TimeStamp = date.AddHours(0.5), NoOfUsers = 1000 });
+            this.GrowthDetails = new ObservableCollection<Sales>();
+            GrowthDetails.Add(new Sales { Product ="Pears", Revenue = 10245 });
+            GrowthDetails.Add(new Sales { Product ="Apples", Revenue = 14567 });
+            GrowthDetails.Add(new Sales { Product ="Tomatoes", Revenue = 32456 });
+            GrowthDetails.Add(new Sales { Product ="Peas", Revenue = 31245 });
+         
         }
 
-        public ObservableCollection<UserProfile> UsersList
+        public ObservableCollection<Sales> GrowthDetails
         {
             get; set;
         }

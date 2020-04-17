@@ -7,22 +7,20 @@
         xmlns:Syncfusion="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
         mc:Ignorable="d"
         Height="600" Width="600">
-    
-    <UserControl.DataContext>
-        <local:UsersViewModel/>
-    </UserControl.DataContext>
 
-    <Syncfusion:SfChart3D x:Name="Chart" Height="500" Width="500" Header="Bar Chart 3D">
-
+    <Syncfusion:SfChart3D x:Name="Chart"  Header="3D Bar Chart ">
+        <Syncfusion:SfChart3D.DataContext>
+            <local:ViewModel/>
+        </Syncfusion:SfChart3D.DataContext>
         <Syncfusion:SfChart3D.PrimaryAxis>
-            <Syncfusion:CategoryAxis3D Header="NoOfUsers"/>
+            <Syncfusion:CategoryAxis3D Header="Products"/>
         </Syncfusion:SfChart3D.PrimaryAxis>
 
         <Syncfusion:SfChart3D.SecondaryAxis>
-            <Syncfusion:NumericalAxis3D Header="TimeStamp"/>
+            <Syncfusion:NumericalAxis3D Header="Revenue"/>
         </Syncfusion:SfChart3D.SecondaryAxis>
 
-        <Syncfusion:BarSeries3D ItemsSource="{Binding UsersList}" XBindingPath="TimeStamp" YBindingPath="NoOfUsers">
+        <Syncfusion:BarSeries3D ItemsSource="{Binding GrowthDetails}" XBindingPath="Product" YBindingPath="Revenue">
             <Syncfusion:BarSeries3D.AdornmentsInfo>
                 <Syncfusion:ChartAdornmentInfo3D   AdornmentsPosition="TopAndBottom" ShowLabel="true" HighlightOnSelection="True"/>
             </Syncfusion:BarSeries3D.AdornmentsInfo>

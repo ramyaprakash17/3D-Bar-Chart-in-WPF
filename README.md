@@ -1,7 +1,7 @@
 # 3D Bar chart in WPF
 This article explains about How to create a 3D Bar Chart in WPF. Please find below KB from more
 
-https://www.syncfusion.com/kb/11464/?utm_medium=listing&utm_source=github-examples
+[3D Bar chart](https://www.syncfusion.com/kb/11464/?utm_medium=listing&utm_source=github-examples)
 
 
 
